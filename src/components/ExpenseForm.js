@@ -69,6 +69,7 @@ export default class ExpenseForm extends React.Component {
   };
 
   render() {
+    // console.log(this.state);
     return (
       <div>
         {this.state.error && <p>{this.state.error}</p>}
@@ -100,7 +101,7 @@ export default class ExpenseForm extends React.Component {
             onChange={this.onNoteChange}
           >
           </textarea>
-          <button>Add Expense</button>
+          <button>{this.state.description ? 'Update Expense' : 'Add Expense'}</button>
         </form>
       </div>
     )

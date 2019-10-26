@@ -56,12 +56,14 @@ export const startSetExpenses = () => {
     .then((snapshot) => {
       // console.log(snapshot.val());
       const expenses = [];
+      
       snapshot.forEach((childSnapshot) => {
         expenses.push({
           id:childSnapshot.key,
           ...childSnapshot.val()
         });
       });
+      
       dispatch(setExpenses(expenses));
     })
     .catch((error) => {

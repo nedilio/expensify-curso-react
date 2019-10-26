@@ -6,6 +6,7 @@ import { editExpense, removeExpense } from '../actions/expenses';
 const EditExpensePage = (props) => {
   return (
     <div>
+    <h1>Update Expense</h1>
       <ExpenseForm 
         expense ={props.expense}
         onSubmit={ (expense) => {
